@@ -1,17 +1,17 @@
 function game(){
-   for (let i = 0;i<5;i++){
-    let playerSelection = prompt("Choose your weapon: Rock, Paper, Scissors").toLowerCase();
-    
-    while(
-        playerSelection !== "rock" &&
-        playerSelection !== "paper" &&
-        playerSelection !== "scissors" 
-    ) {
-        playerSelection = prompt("Please enter a valid weapon!").toLowerCase();
+    for (let i = 0;i<5;i++){
+     let playerSelection = prompt("Choose your weapon: Rock, Paper, Scissors").toLowerCase();
+     
+     while(
+         playerSelection !== "rock" &&
+         playerSelection !== "paper" &&
+         playerSelection !== "scissors" 
+     ) {
+         playerSelection = prompt("Please enter a valid weapon!").toLowerCase();
+     }
+         playRound(playerSelection,getComputerChoice());
     }
-        playRound(playerSelection,getComputerChoice());
-   }
-}
+ }
 function getComputerChoice() {
     let options = { 1: "rock", 2: "paper", 3: "scissors" };
   
